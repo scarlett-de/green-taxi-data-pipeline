@@ -94,7 +94,7 @@ docker-compose up -d
 ```bash
 docker build -t taxi_ingest:v001 .
 ```
-
+Note: It must be located in the same directory where I am running docker build)
 
 ### Step 5: Run the Ingestion Container
 - Use the command below to ingest the Green Taxi CSV file into the Postgres container:
