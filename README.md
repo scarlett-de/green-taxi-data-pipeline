@@ -199,7 +199,7 @@ LIMIT 1;
 ## 👤 Author
 
 **YITIAN WANG**  
-[LinkedIn](www.linkedin.com/in/yitian-w-de) • [GitHub]([https://github.com/scarlett-de])
+[LinkedIn](www.linkedin.com/in/yitian-w-de) • [GitHub](https://github.com/scarlett-de)
 
 
 
