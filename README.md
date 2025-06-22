@@ -60,33 +60,59 @@ Key Capabilities:
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/scarlett-de/green-taxi-data-pipeline.git
-cd green-taxi-data-pipeline
-```
+## 🟢 Steps to Ingest Green Taxi Trips Data
 
-### 2. Start PostgreSQL and pgAdmin
+### ✅ Step 1: Set up PostgreSQL and pgAdmin using Docker Compose
+- Create a `docker-compose.yaml` file that defines two services:
+  - `pgdatabase`: the PostgreSQL database
+  - `pgadmin`: for web-based database management
+- Start the services:
 
 ```bash
 docker-compose up -d
 ```
 
-Visit [http://localhost:8080](http://localhost:8080) to access pgAdmin  
-Register server with:
-- **Host**: `db`
-- **Port**: `5432`
-- **Username/Password**: `root`
+---
 
-### 3. Build and Run Ingestion Container
+### ✅ Step 2: Access pgAdmin
+- Open your browser and navigate to: [http://localhost:8080](http://localhost:8080)
+- Log in using the credentials defined in your `docker-compose.yaml`
+- Register a new server:
+  - **Host name/address**: `pgdatabase`
+  - **Port**: `5432`
+  - **Username**: `root`
+  - **Password**: `root`
+
+---
+
+### ✅ Step 3: Create the Python Ingestion Script
+- Create a script `ingest_data.py` that:
+  - Downloads the dataset from a URL
+  - Reads and processes the CSV file
+  - Connects to the Postgres database
+  - Creates a table (if it doesn’t exist)
+  - Loads the data into the table
+
+---
+
+### ✅ Step 4: Build the Docker Image for Ingestion
+- Write a `Dockerfile` that installs Python and required libraries (`pandas`, `sqlalchemy`, etc.)
+- Build the image using the following command:
 
 ```bash
 docker build -t taxi_ingest:v001 .
+```
 
+---
+
+### ✅ Step 5: Run the Ingestion Container
+- Use the command below to ingest the Green Taxi CSV file into the Postgres container:
+
+```bash
 URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2019-10.csv.gz"
 
 docker run -it \
-  --network=homework1_default \
+  --network=project1_default \
   taxi_ingest:v001 \
   --user=root \
   --password=root \
@@ -97,11 +123,12 @@ docker run -it \
   --url="$URL"
 ```
 
-### 4. Ingest Zone Data
-
-Run the notebook `ingest_zone_lookup.ipynb` to enrich trip records with zone names.
+Make sure:
+- `--network` matches your Docker Compose network
+- `--host` matches the name of your Postgres service in `docker-compose.yaml`
 
 ---
+
 
 ## 📊 Analytics Queries
 
