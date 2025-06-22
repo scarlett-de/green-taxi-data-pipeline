@@ -4,7 +4,6 @@
 
 An end-to-end data engineering project that builds a robust pipeline to ingest, store, and analyze NYC Green Taxi trip data. This project leverages containerized services, cloud infrastructure provisioning, and analytical querying to demonstrate key data engineering concepts.
 
----
 
 ## Project Overview
 
@@ -17,7 +16,6 @@ Key Capabilities:
 - Query data to generate business insights
 - Provision cloud resources (GCS bucket & BigQuery dataset) using Terraform
 
----
 
 ## 🧱 Architecture
 
@@ -45,7 +43,6 @@ Key Capabilities:
         +---------------------------+
 ```
 
----
 
 ## 🛠️ Tech Stack
 
@@ -72,8 +69,6 @@ Key Capabilities:
 docker-compose up -d
 ```
 
----
-
 ### ✅ Step 2: Access pgAdmin
 - Open your browser and navigate to: [http://localhost:8080](http://localhost:8080)
 - Log in using the credentials defined in your `docker-compose.yaml`
@@ -83,7 +78,6 @@ docker-compose up -d
   - **Username**: `root`
   - **Password**: `root`
 
----
 
 ### ✅ Step 3: Create the Python Ingestion Script
 - Create a script `ingest_data.py` that:
@@ -93,7 +87,6 @@ docker-compose up -d
   - Creates a table (if it doesn’t exist)
   - Loads the data into the table
 
----
 
 ### ✅ Step 4: Build the Docker Image for Ingestion
 - Write a `Dockerfile` that installs Python and required libraries (`pandas`, `sqlalchemy`, etc.)
@@ -103,7 +96,6 @@ docker-compose up -d
 docker build -t taxi_ingest:v001 .
 ```
 
----
 
 ### ✅ Step 5: Run the Ingestion Container
 - Use the command below to ingest the Green Taxi CSV file into the Postgres container:
