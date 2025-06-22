@@ -83,7 +83,10 @@ docker-compose up -d
 
 
 ### Step 4: Build the Docker Image for Ingestion
-- Write a `Dockerfile` that installs Python and required libraries (`pandas`, `sqlalchemy`, etc.)
+- Write a `Dockerfile` that installs Python and required libraries
+   - pandas: for data processing
+   - sqlalchem: for database connections
+   - psycopg2: PostgreSQL driver to connect from Python
 - Build the image using the following command:
 
 ```bash
