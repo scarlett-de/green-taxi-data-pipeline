@@ -111,6 +111,12 @@ docker run -it \
   --table_name=green_taxi_trips \
   --url="$URL"
 ```
+### Step 6: Load zone data using Jupter Notebook
+I use jupter to ingest zones data, please see ***ingest_zone_lookup.ipynb***
+
+And check on pgAdmin if datas are loaded properly. 
+
+![image](https://github.com/user-attachments/assets/29fc5643-3a6d-4e11-8d33-4cf92c0cfa84)
 
 
 ## 📊 Analytics Queries
