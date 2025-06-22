@@ -1,6 +1,4 @@
-# green-taxi-data-pipeline
-
-# NYC Green Taxi Data Pipeline 🚖
+# NYC Green Taxi Data Pipeline 
 
 An end-to-end data engineering project that builds a robust pipeline to ingest, store, and analyze NYC Green Taxi trip data. This project leverages containerized services, cloud infrastructure provisioning, and analytical querying to demonstrate key data engineering concepts.
 
@@ -53,9 +51,6 @@ Key Capabilities:
 - **Terraform** – for provisioning GCP cloud infrastructure
 - **SQL** – for analytics and business insight extraction
 
----
-
-## Getting Started
 
 ## Steps to Ingest Green Taxi Trips Data
 
