@@ -192,57 +192,24 @@ ORDER BY max_tip DESC
 LIMIT 1;
 ```
 
----
-
-## ☁️ Cloud Infrastructure Setup (Terraform)
-
-Terraform files used to provision:
-- A Google Cloud Storage (GCS) bucket
-- A BigQuery dataset
-
-### Setup
-
-```bash
-cd terraform
-terraform init
-terraform apply -auto-approve
-```
-
-### Cleanup
-
-```bash
-terraform destroy -auto-approve
-```
-
----
-
-## 📸 Screenshots
-
-_(Optional: Add pgAdmin, dataset, or notebook screenshots here for visual proof)_
-
----
-
-## 📎 Data Source
+## Data Source
 
 - NYC TLC Green Taxi Trip Records  
   [https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
----
+
 
 ## 👤 Author
 
-**Your Name**  
-[LinkedIn](https://linkedin.com/in/your-profile) • [GitHub](https://github.com/your-username)
+**YITIAN WANG**  
+[LinkedIn](www.linkedin.com/in/yitian-w-de) • [GitHub]([https://github.com/scarlett-de])
 
----
+
 
 ## 🧳 Skills Demonstrated
 
 - Docker and container orchestration
 - Custom ingestion scripts with Python
 - Relational data modeling and ingestion
-- Infrastructure-as-Code (IaC) with Terraform
-- Cloud-native resource provisioning (GCP)
 - SQL analytics and business insight generation
 
----
