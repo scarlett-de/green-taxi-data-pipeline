@@ -112,12 +112,6 @@ docker run -it \
   --url="$URL"
 ```
 
-Make sure:
-- `--network` matches your Docker Compose network
-- `--host` matches the name of your Postgres service in `docker-compose.yaml`
-
----
-
 
 ## 📊 Analytics Queries
 
