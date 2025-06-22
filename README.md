@@ -17,7 +17,7 @@ Key Capabilities:
 - Provision cloud resources (GCS bucket & BigQuery dataset) using Terraform
 
 
-## 🧱 Architecture
+##  Architecture
 
 ```
         +----------------+
@@ -44,7 +44,7 @@ Key Capabilities:
 ```
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Docker** & **Docker Compose** – for container orchestration
 - **PostgreSQL** & **pgAdmin** – for relational data storage and inspection
@@ -55,11 +55,11 @@ Key Capabilities:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-## 🟢 Steps to Ingest Green Taxi Trips Data
+## Steps to Ingest Green Taxi Trips Data
 
-### ✅ Step 1: Set up PostgreSQL and pgAdmin using Docker Compose
+### Step 1: Set up PostgreSQL and pgAdmin using Docker Compose
 - Create a `docker-compose.yaml` file that defines two services:
   - `pgdatabase`: the PostgreSQL database
   - `pgadmin`: for web-based database management
@@ -69,9 +69,8 @@ Key Capabilities:
 docker-compose up -d
 ```
 
-### ✅ Step 2: Access pgAdmin
-- Open your browser and navigate to: [http://localhost:8080](http://localhost:8080)
-- Log in using the credentials defined in your `docker-compose.yaml`
+### Step 2: Access pgAdmin
+- Log in using the credentials defined in `docker-compose.yaml` on [http://localhost:8080](http://localhost:8080)
 - Register a new server:
   - **Host name/address**: `pgdatabase`
   - **Port**: `5432`
@@ -79,7 +78,7 @@ docker-compose up -d
   - **Password**: `root`
 
 
-### ✅ Step 3: Create the Python Ingestion Script
+### Step 3: Create the Python Ingestion Script
 - Create a script `ingest_data.py` that:
   - Downloads the dataset from a URL
   - Reads and processes the CSV file
@@ -88,7 +87,7 @@ docker-compose up -d
   - Loads the data into the table
 
 
-### ✅ Step 4: Build the Docker Image for Ingestion
+### Step 4: Build the Docker Image for Ingestion
 - Write a `Dockerfile` that installs Python and required libraries (`pandas`, `sqlalchemy`, etc.)
 - Build the image using the following command:
 
@@ -97,7 +96,7 @@ docker build -t taxi_ingest:v001 .
 ```
 
 
-### ✅ Step 5: Run the Ingestion Container
+### Step 5: Run the Ingestion Container
 - Use the command below to ingest the Green Taxi CSV file into the Postgres container:
 
 ```bash
