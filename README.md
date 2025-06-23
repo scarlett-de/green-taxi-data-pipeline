@@ -1,19 +1,17 @@
 # NYC Green Taxi Data Pipeline 
 
-An end-to-end data engineering project that builds a robust pipeline to ingest, store, and analyze NYC Green Taxi trip data. This project leverages containerized services, cloud infrastructure provisioning, and analytical querying to demonstrate key data engineering concepts.
+This is a hands-on data engineering project where I built a full pipeline to load, store, and explore NYC Green Taxi trip data. The idea was to use real-world tools like Docker, Python, and PostgreSQL to get from raw data to actual insights.
 
 
 ## Project Overview
 
-This project automates the ingestion of NYC Green Taxi trip data into a PostgreSQL database and enables structured querying through pgAdmin and SQL. It uses Docker for containerization, Python for ingestion, and Terraform for cloud provisioning on GCP.
+This project automates the ingestion of NYC Green Taxi trip data into a PostgreSQL database and enables structured querying through pgAdmin and SQL. It uses Docker for containerization, Python for ingestion。
 
-Key Capabilities:
-- Ingest raw CSV data from a public source
-- Transform and store structured data in PostgreSQL
-- Use pgAdmin for database management
-- Query data to generate business insights
-- Provision cloud resources (GCS bucket & BigQuery dataset) using Terraform
-
+What this project does:
+ -- Downloads and processes raw CSV data from a public URL
+ -- Loads that data into a PostgreSQL database using a Python script
+ -- Uses pgAdmin as a GUI to browse and manage the database
+ -- Runs SQL queries to explore trip patterns, distances, revenue zones, and more
 
 ##  Architecture
 
@@ -39,13 +37,12 @@ Key Capabilities:
 ```
 
 
-## Tech Stack
+## Tech Used
 
 - **Docker** & **Docker Compose** – for container orchestration
 - **PostgreSQL** & **pgAdmin** – for relational data storage and inspection
 - **Python** & **Pandas** – for data ingestion and transformation
 - **Jupyter Notebook** – for structured data enrichment
-- **Terraform** – for provisioning GCP cloud infrastructure
 - **SQL** – for analytics and business insight extraction
 
 
